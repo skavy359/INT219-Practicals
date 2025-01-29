@@ -1,0 +1,38 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "left right-top"
+    "left right-bottom";
+    grid-template-rows: auto auto;
+    grid-template-columns: 1fr 1fr;
+    height: 100vh;
+}
+.left{
+    grid-area: left;
+    background-color: green;
+    text-align: center;
+    align-content: center;
+    color:wheat;
+    padding: 1rem;
+}
+.right-top{
+    grid-area: right-top;
+    padding: 1rem;
+    color:wheat;
+    align-content: center;
+    background-color: brown;
+    text-align: center;
+}
+.right-bottom{
+    grid-area: right-bottom;
+    padding: 1rem;
+    align-content: center;
+    text-align: center;
+    background-color: yellow;
+}
+

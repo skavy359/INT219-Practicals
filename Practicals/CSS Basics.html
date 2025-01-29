@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS Basics</title>
+</head>
+<style>
+    h1{
+    background-color: green;
+}
+div{
+    background-color: aquamarine;
+    margin-left: 100px;
+    opacity: 0.00001;
+}
+p#yellow{
+    background-color: yellow;
+}
+.none{
+    border-style: none;
+}
+.hidden{
+    border-style: hidden;
+}
+.mix{
+    border-style: dotted dashed solid double;
+}
+a:link{
+    color:red;
+}
+a:visited{
+    color:green;
+}
+a:hover{
+    color:magenta;
+    font-size: larger;
+}
+p .ex1{
+    margin-left: inherit;
+}
+</style>
+
+<body>
+    <p class="none">No Border</p>
+    <p class="hidden">Hidden border</p>
+    <p class="mix">Mixed border idk</p>
+    <a href="https://www.linkedin.com/in/kavy-sharma-a1315328b/">This is the link</a>
+    <h1>CSS Background-Color Example!</h1>
+    content outside div
+    <div>
+        This is a div tag
+        <p class="ex1">This is a text inside a div element.</p>
+    </div>
+</body>
+</html>

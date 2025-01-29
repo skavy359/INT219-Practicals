@@ -1,0 +1,55 @@
+body{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 0;
+    padding: 0;
+}
+.grid-container{
+    display: grid;
+    grid-template-areas: 
+    "A B C"
+    "D D D"
+    "E E E";
+    grid-template-rows: auto auto auto;
+    grid-template-columns:auto auto;
+    height: 100vh;
+}
+.A{
+    grid-area: A;
+    background-color: green;
+    text-align: center;
+    align-content: center;
+    color:wheat;
+    padding: 1rem;
+}
+.B{
+    grid-area: B;
+    padding: 1rem;
+    color:wheat;
+    align-content: center;
+    background-color: brown;
+    text-align: center;
+}
+.C{
+    grid-area: C;
+    padding: 1rem;
+    align-content: center;
+    text-align: center;
+    color:black;
+    background-color: yellow;
+}
+.D{
+    grid-area: D;
+    padding: 1rem;
+    color:wheat;
+    align-content: center;
+    text-align: center;
+    background-color: blueviolet;
+}
+.E{
+    color:wheat;
+    grid-area: E;
+    padding: 1rem;
+    align-content: center;
+    text-align: center;
+    background-color: mediumvioletred;
+}

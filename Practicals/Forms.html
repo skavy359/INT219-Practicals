@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="Forms.css">
+    <title>Forms</title>
+</head>
+<body>
+    <form>
+        <h2>Don't have an account?! Want to Join us?</h2>
+        <label for="Name">Name</label>
+        <br>
+        <input type="name" name="name" id="name" placeholder="First Name and Last Name" required>
+        <br>
+        <label for="Email">Email</label>
+        <br>
+        <input type="email" name="email" id="email" placeholder="Enter your email" required>
+        <br>
+        <label for="Select City">Select City</label>
+        <br>
+        <select name="Select" id="select" required> Select
+            <option value="Select" hidden>Select</option>
+            <option value="Pathankot">Pathankot</option>
+            <option value="Jalandhar">Jalandhar</option>
+            <option value="Delhi">Delhi</option>
+            <option value="Bangalore">Bangalore</option>
+        </select>
+        <br>
+        <label for="Address">Address</label>
+        <br>
+        <textarea name="Enter here" id="address" placeholder="Enter the Address" required></textarea>
+        <br>
+        <label for="Gender">Gender</label>
+        <br>
+        <input type="radio" name="gender" id="male">
+        <label for="male">Male</label>
+        <input type="radio" name="gender" id="female">
+        <label for="female">Female</label>
+        <input type="radio" name="gender" id="non-exist">
+        <label for="non-exist">Non-exist</label>
+        <br>
+        <label for="Password">Password</label>
+        <br>
+        <input type="password" placeholder="Enter password" id="password" required>
+        <br>
+        <label for="Upload the file">Upload the file</label>
+        <br>
+        <input type="file" name="file" id="file" required>
+        <br>
+        <input type="submit" name="submit" id="submit">
+        <input type="reset" name="submit" id="submit">
+
+        <h1>Thank you for contacting us.</h1>
+    </form>
+</body>
+</html>

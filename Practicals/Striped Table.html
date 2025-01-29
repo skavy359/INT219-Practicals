@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=
+    , initial-scale=1.0">
+    <title>Striped table</title>
+</head>
+
+<style>
+    table{
+        border-collapse: separate;
+        width: 100%;
+        text-align: center;
+        border: 2px solid black;
+    }
+    th,td{
+        border-bottom: 2px solid grey;
+        padding: 10px;
+        color: black;
+    }
+    tbody tr:nth-child(even){
+        background-color: brown;
+    }
+    tbody tr:nth-child(odd){
+        background-color: green;
+    }
+</style>
+
+<body>
+    <table>
+        <caption>Striped Pattern</caption>
+        <thead>
+            <th>Name</th>
+            <th>Subject</th>
+            <th>Marks</th>
+        </thead>
+            <tbody>
+                <tr>
+                    <td>Kavy</td>
+                    <td>AI</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Kartavya</td>
+                    <td>AI</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Ronit</td>
+                    <td>AI</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Karan</td>
+                    <td>AI</td>
+                    <td>100</td>
+                </tr>
+                <tr>
+                    <td>Khushi</td>
+                    <td>AI</td>
+                    <td>100</td>
+                </tr>
+            </tbody>
+    </table>
+</body>
+</html>
