@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Typographies</title>
+    <link href="./output.css" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="bg-black text-white p-6">
+    <div class="container mx-auto">
+        <h1 class="text-4xl font-extrabold text-center mb-8">Tailwind CSS Typography</h1>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Headings</h2>
+            <h1 class="text-4xl font-extrabold mb-2">Heading 1</h1>
+            <h2 class="text-3xl font-bold mb-2">Heading 2</h2>
+            <h3 class="text-2xl font-semibold mb-2">Heading 3</h3>
+            <h4 class="text-xl font-medium mb-2">Heading 4</h4>
+            <h5 class="text-lg font-normal mb-2">Heading 5</h5>
+            <h6 class="text-base font-light mb-2">Heading 6</h6>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Paragraphs</h2>
+            <p class="text-white leading-relaxed">This is a paragraph with default styling. Tailwind CSS provides
+                utilities to control text-size, color, line height and more.
+            </p>
+            <p class="text-lg text-white leading-loose mb-4">This is a larger paragraph
+                with lighter text color and increased line height for better readability.
+            </p>
+            <p class="text-sm text-white">
+                This is a smaller paragraph with muted text color.
+            </p>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Blockquotes</h2>
+            <blockquote class="border-l-4 border-blue-500 pl-4 italic text-pink-300">
+                "Tailwind CSS makes styling effortless and highly customizable."
+            </blockquote>
+        </section>
+
+        <section class="mb-12">
+            <h2 class="text-2xl font-bold mb-4">Lists</h2>
+            <ul class="list-disc pl-6 mb-4">
+                <h2 class="text-2xl font-bold mb-4">Unordered List Items</h2>
+                <li class="mb-2">Unordered List Item 1</li>
+                <li class="mb-2">Unordered List Item 2</li>
+                <li class="mb-2">Unordered List Item 3</li>
+            </ul>
+            <ol class="list-decimal pl-6">
+                <h2 class="text-2xl font-bold mb-4">Ordered List Items</h2>
+                <li class="mb-2">Ordered List Item 1</li>
+                <li class="mb-2">Ordered List Item 2</li>
+                <li class="mb-2">Ordered List Item 3</li>
+            </ol>
+        </section>
+
+        <section>
+            <h2 class="text-2xl font-bold mb-4">Inline Text Styles</h2>
+            <p>You can style text with <span class="font-bold">Bold</span>, <span class="italic">Italic</span>
+                , <span class="underline">Underline</span>, and <span class="line-through">Line-Through</span> utilities. You can 
+                also change <span class="text-pink-500">text color</span>, and <span class="bg-amber-100 text-blue-500">Background color</span>.
+            </p>
+        </section>
+        <marquee behavior="alternate" direction="down" height="500px">
+            <marquee behavior="alternate" direction="right" width="500px">
+                <img src="1.jpeg" alt="DVD Logo">
+            </marquee>
+            </marquee>
+    
+    </div>
+</body>
+</html>
