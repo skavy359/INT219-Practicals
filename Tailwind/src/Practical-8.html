@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1 id="title">Hello, World!</h1>
+    <img id="image" src="Image-5.jpg" alt="img">
+    <p id="description" class="highlight">This is a simple paragraph</p>
+    <div>
+        <button id="eventBtn">Change Content</button>
+        <button id="imageBtn">Change Image</button>
+        <button id="styleBtn">Change Style</button>
+        <button id="ToggleBtn">Toggle Highlight</button>
+        <button id="ClickBtn">Click Me</button>
+    </div>
+
+    <script>
+        const title=document.getElementById("title");
+        const image=document.getElementById("image");
+        const paragraph=document.querySelector(".description");
+        const eventBtn=document.getElementById("eventBtn");
+
+        document.getElementById("eventBtn").addEventListener("click",()=>{
+            title.textContent="Welcome to JavaScript!!";
+            paragraph.innerHTML="<strong>Updated paragraph Content </strong>";
+        });
+
+        document.getElementById("imageBtn").addEventListener("click",()=>{
+            image.setAttribute("src","Image-4.jpeg");
+            image.setAttribute("alt","Updated src");
+        });
+
+        document.getElementById("styleBtn").addEventListener("click",()=>{
+            title.style.color="blue";
+            paragraph.style.fontSize="200px";
+        });
+
+        document.getElementById("ToggleBtn").addEventListener("click",()=>{
+            paragraph.classList.toggle("highlight");
+        });
+
+        document.getElementById("ClickBtn").addEventListener("click",()=>{
+            alert("You clicked me i got afraid brooo wtf?!?!?!?");
+        });
+    </script>
+</body>
+</html>
