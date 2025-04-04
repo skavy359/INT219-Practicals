@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic Paragraph Styler</title>
+    <link href="./output.css" rel="stylesheet">
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+</head>
+<body class="p-10 bg-gradient-to-r from-purple-600 to-pink-500">
+    <div class="flex flex-col items-center h-screen">
+        <h1 class="font-extrabold text-4xl text-white mb-6">🎨 Dynamic Paragraph Styler</h1>
+        <div class="border w-full max-w-md mx-auto rounded-2xl border-white bg-white p-4 mb-6">
+            <h2 class="font-extrabold text-2xl p-2 text-center">Customize Your Paragraph</h2>
+            <div>
+                <h3 class="font-bold p-2">Text Color: </h3>
+                <select class="font-bold bg-gray-300 rounded-lg border p-3 w-full" id="text-color-selector">
+                    <option value="Black">Black</option>
+                    <option value="Red">Red</option>
+                    <option value="Green">Green</option>
+                </select>
+            </div>
+            <div>
+                <h3 class="font-bold p-2">Font Size: </h3>
+                <select class="font-bold rounded-lg border p-3 w-full" id="font-size-selector">
+                    <option value="Small">Small</option>
+                    <option value="Medium">Medium</option>
+                    <option value="Large">Large</option>
+                </select>
+            </div>
+            <div>
+                <h3 class="font-bold p-2">Background Color: </h3>
+                <select class="font-bold rounded-lg border p-3 w-full" id="bg-color-selector">
+                    <option value="White">White</option>
+                    <option value="Blue Gradient">Blue Gradient</option>
+                    <option value="Pink Gradient">Pink Gradient</option>
+                </select>
+            </div>
+
+            <div class="w-full border rounded-lg p-3 mt-4 text-center bg-gradient-to-r from-pink-600 to-blue-600">
+                <button id="apply-styles-button" class="font-bold text-white">✨Apply Styles</button>
+            </div>
+        </div>
+
+        <div id="paraWalaDiv" class="mt-4 border flex rounded-2xl p-4 h-20 items-center justify-center w-full max-w-md mx-auto bg-white">
+            <p id="sample-paragraph" class="text-md">This is a sample paragraph. Change my Style!!</p>
+        </div>
+    </div>
+
+    <script>
+        const textColorSelect = document.getElementById('text-color-selector');
+        const fontSizeSelect = document.getElementById('font-size-selector');
+        const backgroundColorSelect = document.getElementById('bg-color-selector');
+        const styledParagraph = document.getElementById('sample-paragraph');
+        const parakaDiv= document.getElementById('paraWalaDiv');
+
+        textColorSelect.addEventListener('change', function() {
+            styledParagraph.style.color = this.value;
+        });
+
+        fontSizeSelect.addEventListener('change', function() {
+            switch (this.value) {
+                case 'Small':
+                    styledParagraph.style.fontSize = '12px';
+                    break;
+                case 'Medium':
+                    styledParagraph.style.fontSize = '16px';
+                    break;
+                case 'Large':
+                    styledParagraph.style.fontSize = '20px';
+                    break;
+                default:
+                    styledParagraph.style.fontSize = '16px';
+            }
+        });
+
+        backgroundColorSelect.addEventListener('change', function() {
+            switch (this.value) {
+                case 'White':
+                    parakaDiv.style.background = 'white';
+                    styledParagraph.style.display = 'inline-block';
+                    break;
+                case 'Blue Gradient':
+                    parakaDiv.style.background = 'linear-gradient(to right, #1e3a8a, #3b82f6)';
+                    styledParagraph.style.display = 'inline-block';
+                    break;
+                case 'Pink Gradient':
+                    parakaDiv.style.background = 'linear-gradient(to right, #ec4899, #f472b6)';
+                    styledParagraph.style.display = 'inline-block';
+                    break;
+                default:
+                    parakaDiv.style.background = 'white';
+                    styledParagraph.style.display = 'inline-block';
+            }
+        });
+    </script>
+</body>
+</html>
