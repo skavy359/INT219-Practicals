@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Countdown Timer</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-r from-blue-500 to-purple-500 flex items-center justify-center min-h-screen">
+    <div class="bg-white p-8 rounded-lg shadow-lg text-center space-y-6">
+        <h1 class="text-4xl font-bold text-blue-600">Countdown Timer</h1>
+        <div class="flex flex-col items-center justify-center">
+            <input id="inputSeconds" type="number" placeholder="Enter seconds" 
+                class="border border-gray-300  rounded-lg p-2 text-center w-48">
+            <button id="startButton" 
+                class="bg-blue-600 mt-4 w-30 text-white p-3 rounded-xl hover:bg-blue-700">
+                Start
+            </button>
+        </div>
+        <div id="timer" class="text-4xl font-mono rounded-2xl border-2 p-2 bg-purple-200 text-blue-600">00:00:00</div>
+    </div>
+
+    <script>
+        document.getElementById('startButton').addEventListener('click', () => {
+            const inputSeconds = parseInt(document.getElementById('inputSeconds').value, 10);
+            if (isNaN(inputSeconds) || inputSeconds <= 0) {
+                alert('Please enter a valid number of seconds.');
+                return;
+            }
+            startCountdown(inputSeconds);
+        });
+
+        function startCountdown(durationInSeconds) {
+            const timerElement = document.getElementById('timer');
+            let remainingTime = durationInSeconds;
+
+            function updateTimerDisplay() {
+                const hours = String(Math.floor(remainingTime / 3600)).padStart(2, '0');
+                const minutes = String(Math.floor((remainingTime % 3600) / 60)).padStart(2, '0');
+                const seconds = String(remainingTime % 60).padStart(2, '0');
+                timerElement.textContent = `${hours}:${minutes}:${seconds}`;
+            }
+
+            const interval = setInterval(() => {
+                if (remainingTime <= 0) {
+                    clearInterval(interval);
+                    timerElement.textContent = "Time's Up!";
+                } else {
+                    remainingTime--;
+                    updateTimerDisplay();
+                }
+            }, 1000);
+
+            updateTimerDisplay();
+        }
+    </script>
+</body>
+</html>
